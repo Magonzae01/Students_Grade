@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Grade</title>
+    <link rel="stylesheet" href="grade.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h3 class="section2-title">Subject Details</h3>
+    </nav>
+
+    <div id="section1" class="section">
+        <h1 class="no_1">STUDENT</h1>
+        <h1 class="no_2">GRADES</h1>
+        <div class="main">
+            <form id="grade-form">
+                <label for="count">Students count</label><br>
+                <input type="number" id="count" name="count" min="1" max="60" placeholder="Count"><br><br>
+                <label for="Total_sub">Total Subjects</label><br>
+                <input type="number" id="Total_sub" name="Total_sub" min="1" max="10" placeholder="Total Subjects"><br><br>
+                <button type="button" onclick="generateSubjects()">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <div id="section2" class="section whatsapp-background" style="display: none;">
+        <div class="white-background">
+        <div class="content">
+            <form id="subjects-form">
+                <div id="dynamic-inputs" class="input-container"></div>
+                <button type="button" onclick="generateStudentForm()">Next</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    
+    <div id="section3" class="section whatsapp-background" style="display: none;">
+        <div class="white-background">
+        <div class="content">
+            <form id="student-form" style="display: flex; flex-direction: column; flex-wrap: wrap;overflow: hidden;padding-bottom: 90px;"></form>
+            <button type="button" onclick="calculateGrades()">Submit</button>
+        </div>
+        </div>
+    </div>
+     
+    <div id="section4" class="section whatsapp-background" style="display: none;">
+        <div class="white-background">
+        <div class="content">
+            <table id="grades-table" class="grades-table">
+                
+            </table>
+        </div>
+        </div>
+    </div>
+
+    <script src="grade.js"></script>
+</body>
+</html>

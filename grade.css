@@ -1,0 +1,165 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.navbar {
+    height: 3000px;
+    width: 100%;
+    background-color: #171817;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.section2-title {
+    color: white;
+    margin: 0;
+    font-size: 1.5em;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.section {
+    min-height: calc(100vh - 50px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: aliceblue;
+    margin-top: 50px;
+}
+
+.whatsapp-background {
+    background-image: url(./whats.jpg);
+    
+    color: #000;
+    
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.white-background{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    margin-bottom: 20px;
+    max-height: 400px; /* Set a max height for the container */
+    overflow-y: auto; /* Make the container scrollable */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a slight shadow for visual separation */
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.subject-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.no_1 {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.no_2 {
+    animation: slideInFromRight 1s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+input {
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    margin-top: 15px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.form_2 button{
+    margin-left: 650px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+    .input-container {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on smaller screens */
+    }
+    
+    h1 {
+        font-size: 3em;
+    }
+
+    label {
+        font-size: 1.5em;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
